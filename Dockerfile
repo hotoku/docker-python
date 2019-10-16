@@ -16,12 +16,10 @@ RUN conda install -y -c conda-forge \
   folium \
   geojson \
   h3 \
-  jismesh \
   lightgbm \
   matplotlib \
   nodejs \
   numpy \
-  optuna \
   pandas \
   plotly \
   pystan \
@@ -31,6 +29,9 @@ RUN conda install -y -c conda-forge \
   seaborn \
   statsmodels \
   xgboost
+RUN pip install \
+  jismesh \
+  optuna 
 
 
 

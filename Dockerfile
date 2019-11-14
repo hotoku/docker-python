@@ -37,7 +37,8 @@ RUN pip install \
 
 
 RUN jupyter labextension install @jupyterlab/toc
-
+RUN pip install --upgrade jupyterlab-git && jupyter lab build
+RUN jupyter labextension install @jupyterlab/git && jupyter serverextension enable --py jupyterlab_git
 
 
 

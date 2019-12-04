@@ -10,16 +10,19 @@ WORKDIR /root/work
 
 
 
-RUN conda update -n base -c defaults conda
-RUN conda install -y -c conda-forge \
+RUN conda update -n base -c defaults conda && \
+  conda install -y -c conda-forge \
   Cython \
   folium \
   geojson \
   h3 \
+  install \
+  jismesh \
   lightgbm \
   matplotlib \
   nodejs \
   numpy \
+  optuna \
   pandas \
   plotly \
   pystan \
@@ -28,19 +31,17 @@ RUN conda install -y -c conda-forge \
   scipy \
   seaborn \
   statsmodels \
-  xgboost
-RUN pip install \
-  jismesh \
-  optuna 
-
-
-
-
-RUN jupyter labextension install @jupyterlab/toc
-RUN pip install --upgrade jupyterlab-git && jupyter lab build
-RUN jupyter labextension install @jupyterlab/git && jupyter serverextension enable --py jupyterlab_git
+  xgboost && \
+  jupyter labextension install @jupyterlab/toc && \
+  pip install --upgrade jupyterlab-git && \
+  jupyter lab build && \
+  jupyter labextension install @jupyterlab/git && \
+  jupyter serverextension enable --py jupyterlab_git
 
 
 
 COPY run-lab /usr/local/bin/run-lab
 RUN chmod u+x /usr/local/bin/run-lab
+
+
+ENTRYPOINT run-lab

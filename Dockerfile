@@ -38,6 +38,11 @@ RUN pip install statsmodels
 RUN pip install xgboost
 
 
+RUN apt update              &&\
+  apt-get install -y nodejs &&\
+  apt-get install -y npm
+
+
 RUN jupyter labextension install @jupyterlab/toc
 RUN jupyter lab build
 RUN jupyter labextension install @jupyterlab/git

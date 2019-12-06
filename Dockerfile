@@ -15,9 +15,6 @@ RUN conda update -n base -c defaults conda && \
   Cython \
   folium \
   geojson \
-  h3 \
-  install \
-  jismesh \
   lightgbm \
   matplotlib \
   nodejs \
@@ -38,6 +35,7 @@ RUN conda update -n base -c defaults conda && \
   jupyter labextension install @jupyterlab/git && \
   jupyter serverextension enable --py jupyterlab_git
 
+RUN pip install jismesh
 
 
 COPY run-lab /usr/local/bin/run-lab

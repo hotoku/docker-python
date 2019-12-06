@@ -12,4 +12,4 @@ while getopts p:v: OPT; do
 done
 
 
-docker run -d --rm -p ${PORT}:8888 -v ${VOLUME}:/root/work hotoku/python bash -lc /usr/local/bin/run-lab
+docker run --rm -p ${PORT}:8888 -v ${VOLUME}:/root/work hotoku/python bash -lc /usr/local/bin/run-lab

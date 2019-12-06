@@ -48,6 +48,7 @@ RUN jupyter lab build
 RUN jupyter labextension install @jupyterlab/git
 RUN jupyter serverextension enable --py jupyterlab_git
 
+RUN pip install gensim
 
 
 COPY run-lab /usr/local/bin/run-lab

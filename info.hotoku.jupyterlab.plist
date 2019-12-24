@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>KeepAlive</key>
+  <true/>
+	<key>Label</key>
+	<string>info.hotoku.plist-jupyterlab</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/hotoku/project/plist-jupyterlab/run.sh</string>
+		<string>-p</string>
+		<string>9002</string>
+		<string>-v</string>
+		<string>/Users/hotoku/samples/ipynotebook</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/tmp/plist-jupter.err</string>
+	<key>StandardOutPath</key>
+	<string>/tmp/plist-jupter.out</string>
+</dict>
+</plist>

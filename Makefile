@@ -1,5 +1,6 @@
 .PHONY: all rebuild
 
+
 all:
 	docker build -t hotoku/python .
 

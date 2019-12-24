@@ -1,7 +1,6 @@
 #/bin/bash
 
 PORT=8888
-VOLUME=/Users/hotoku/samples/ipynotebook
 
 while getopts p:v: OPT; do
     case ${OPT} in

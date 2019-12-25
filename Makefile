@@ -25,5 +25,4 @@ unload: stop
 		launchctl unload $(PLIST_NAME).plist
 
 stop: 
-	docker stop plist-jupyter || true
-
+	docker stop jupyterlab || true

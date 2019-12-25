@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-cat /tmp/plist-jupyter.err                       |\
+cat /tmp/jupyterlab.err                          |\
     grep http://127                              |\
     tail -n1                                     |\
     awk '{print $2}'                             |\

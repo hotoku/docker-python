@@ -28,5 +28,5 @@ DOCKER=/usr/local/bin/docker
 ${DOCKER} run --rm ${IT_OP}       \
           -p ${PORT}:8888         \
           ${VOLUME_OP}            \
-          --name plist-jupyter    \
+          --name jupyterlab    \
           hotoku/python bash -lc /usr/local/bin/run-lab

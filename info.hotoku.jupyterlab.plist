@@ -5,7 +5,7 @@
 	<key>KeepAlive</key>
   <true/>
 	<key>Label</key>
-	<string>info.hotoku.plist-jupyterlab</string>
+	<string>info.hotoku.jupyterlab</string>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/Users/hotoku/project/plist-jupyterlab/run.sh</string>
@@ -17,8 +17,8 @@
 	<key>RunAtLoad</key>
 	<true/>
 	<key>StandardErrorPath</key>
-	<string>/tmp/plist-jupyter.err</string>
+	<string>/tmp/jupyterlab.err</string>
 	<key>StandardOutPath</key>
-	<string>/tmp/plist-jupyter.out</string>
+	<string>/tmp/jupyterlab.out</string>
 </dict>
 </plist>
